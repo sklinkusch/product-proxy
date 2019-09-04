@@ -18,9 +18,16 @@ module.exports = async (req, res) => {
         status,
         status_verbose,
       } = data;
+      const catArray = categories.split(',').map(category => category.trim());
       const newData = {
         code,
-        product: { code: pcode, brands, categories, product_name, quantity },
+        product: {
+          code: pcode,
+          brands,
+          categories: catArray,
+          product_name,
+          quantity,
+        },
         status,
         status_verbose,
       };
