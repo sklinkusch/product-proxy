@@ -17,7 +17,7 @@ module.exports = async (req, res) => {
         product: {
           code: pcode,
           brands = '',
-          categories = [],
+          categories = '',
           product_name = '',
           quantity = '',
         },
