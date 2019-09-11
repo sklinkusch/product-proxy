@@ -15,12 +15,12 @@ module.exports = async (req, res) => {
       const {
         code,
         product: {
-          code: pcode,
+          code: pcode = code,
           brands = '',
           categories = '',
           product_name = '',
           quantity = '',
-        },
+        } = {},
         status,
         status_verbose,
       } = data;
